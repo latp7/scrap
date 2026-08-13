@@ -1,0 +1,1 @@
+﻿{"name":"saldos-combustible-scraper","version":"1.0.0","private":true,"type":"module","scripts":{"scrape":"node scripts/snapshot-biopetrol.mjs","check":"node --check scripts/snapshot-biopetrol.mjs"},"dependencies":{"cheerio":"^1.1.2","tesseract.js":"^7.0.0"}}
