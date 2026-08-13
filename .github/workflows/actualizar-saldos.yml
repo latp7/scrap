@@ -26,4 +26,9 @@ jobs:
       - name: Guardar última lectura en Cloudflare KV
         env:
           UPLOAD_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
-        run: curl --fail-with-body --retry 3 --request PUT --header "Authorization: Bearer $UPLOAD_TOKEN" --header "Content-Type: application/json" --data-binary @external-data.json https://scrap-trigger.scrap-trigger.workers.dev/data
+        run: |
+          curl --fail-with-body --retry 3 --request PUT \
+            --header "Authorization: Bearer $UPLOAD_TOKEN" \
+            --header "Content-Type: application/json" \
+            --data-binary @external-data.json \
+            https://scrap-trigger.scrap-trigger.workers.dev/data
