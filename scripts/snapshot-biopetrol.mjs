@@ -6,6 +6,8 @@ const GENEX_ID="10000000-0000-4000-8000-000000000003";
 const GENEX_URL="https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1";
 const RIVERO_ID="10000000-0000-4000-8000-000000000004";
 const RIVERO_URL="https://www.estacionrivero.com/index.php?option=com_content&view=category&layout=blog&id=11&Itemid=106";
+const GASGROUP_ID="10000000-0000-4000-8000-000000000005";
+const GASGROUP_URL="https://gasgroup.com.bo/estaciones/santacruz";
 const pages=[{url:"https://app9.biocloud.info/saldos/main/donde/132",fallback:"DIESEL",color:"#3b82f6"},{url:"https://app9.biocloud.info/saldos/main/donde/134",fallback:"GASOLINA ESPECIAL",color:"#ff6900"}];
 const correctedCoordinates={LOPEZ:"-17.7255538,-63.1652414"};
 const clean=value=>String(value??"").replace(/\s+/g," ").trim();
@@ -41,11 +43,27 @@ async function scrapeRivero(){
     const rows=[];for(const chart of charts){const text=(await worker.recognize(chart.src)).data.text,lines=text.split(/\r?\n/).map(clean).filter(Boolean),lastLine=lines.at(-1)||"",liters=/^[o0]\s*litros?$/i.test(lastLine)?0:numeric(lastLine);rows.push({id_empresa:RIVERO_ID,id_sucursal:"rivero-central",sucursal:"Estación de Servicio Rivero",direccion:"Av. Cristo Redentor esquina Medardo Chávez, Santa Cruz de la Sierra",id_producto:`rivero-${slug(chart.title)}`,combustible:chart.title,color:chart.title.includes("DIESEL")?"#3b82f6":chart.title.includes("PREMIUM")?"#7c3aed":"#ef4444",saldo_litros:liters,capacidad_litros:null,estado:liters>0?"CON STOCK":"AGOTADO",ultima_medicion:updated,coordenadas:"-17.7624684,-63.1804821",map_url:"https://www.google.com/maps?q=-17.7624684,-63.1804821",fuente:RIVERO_URL,source_scraping:true});}return rows;
   }finally{await worker.terminate();}
 }
+async function scrapeGasgroup(){
+  const response=await fetch(GASGROUP_URL,{headers:{accept:"application/json","x-requested-with":"XMLHttpRequest","user-agent":"Mozilla/5.0 SaldosCombustible/1.0"}});if(!response.ok)throw new Error(`GASGROUP respondió ${response.status}`);
+  const data=await response.json(),rows=[];
+  for(const station of data.estaciones||[]){
+    const sucursal=clean(station.nombre);if(!sucursal)continue;
+    const grouped=new Map();
+    for(const tank of station.tanques||[]){
+      if(!/gasolina/i.test(tank.producto||""))continue;
+      const combustible=clean(tank.producto).replace(/\s*\+\s*$/," +"),key=slug(combustible),previous=grouped.get(key)||{combustible,saldo:0,measurements:[]};
+      previous.saldo+=Number(tank.litros)||0;previous.measurements.push(clean(`${tank.fecha||""} ${tank.hora||""}`));grouped.set(key,previous);
+    }
+    const longitude=String(station.mapa_url||"").match(/!2d(-?\d+(?:\.\d+)?)/)?.[1],latitude=String(station.mapa_url||"").match(/!3d(-?\d+(?:\.\d+)?)/)?.[1],coordinates=latitude&&longitude?`${latitude},${longitude}`:"";
+    for(const [key,product] of grouped)rows.push({id_empresa:GASGROUP_ID,id_sucursal:`gasgroup-${slug(station.codigo||sucursal)}`,sucursal,direccion:"Santa Cruz de la Sierra",id_producto:`gasgroup-${key}`,combustible:product.combustible,color:"#ef4444",saldo_litros:Number(product.saldo.toFixed(2)),capacidad_litros:null,estado:product.saldo>1500?"CON STOCK":"AGOTADO",ultima_medicion:product.measurements.sort().at(-1)||"",coordenadas:coordinates,map_url:coordinates?`https://www.google.com/maps?q=${coordinates}`:"",fuente:GASGROUP_URL,source_scraping:true});
+  }
+  return rows;
+}
 const target="external-data.json";
 let previous={balances:[]};try{previous=JSON.parse(await readFile(target,"utf8"));}catch{previous=JSON.parse(await readFile("data.json","utf8"));}
 const previousExternal=id=>(previous.balances||[]).filter(row=>row.id_empresa===id);
 async function preserve(name,id,task){try{const rows=await task();if(!rows.length)throw new Error("respuesta vacía");return rows;}catch(error){const rows=previousExternal(id);console.error(`${name}: ${error.message}; se conservan ${rows.length} filas anteriores.`);return rows;}}
-const biopetrol=await preserve("Biopetrol",BIOPETROL_ID,async()=>(await Promise.all(pages.map(scrape))).flat()),genex=await preserve("GENEX",GENEX_ID,scrapeGenex),rivero=await preserve("Rivero",RIVERO_ID,scrapeRivero);
-await writeFile(target,JSON.stringify({generatedAt:new Date().toISOString(),balances:[...biopetrol,...genex,...rivero]},null,2));
-console.log(`Lecturas externas: ${biopetrol.length} Biopetrol, ${genex.length} GENEX, ${rivero.length} Rivero`);
+const biopetrol=await preserve("Biopetrol",BIOPETROL_ID,async()=>(await Promise.all(pages.map(scrape))).flat()),genex=await preserve("GENEX",GENEX_ID,scrapeGenex),rivero=await preserve("Rivero",RIVERO_ID,scrapeRivero),gasgroup=await preserve("GASGROUP",GASGROUP_ID,scrapeGasgroup);
+await writeFile(target,JSON.stringify({generatedAt:new Date().toISOString(),balances:[...biopetrol,...genex,...rivero,...gasgroup]},null,2));
+console.log(`Lecturas externas: ${biopetrol.length} Biopetrol, ${genex.length} GENEX, ${rivero.length} Rivero, ${gasgroup.length} GASGROUP`);
 
