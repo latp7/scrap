@@ -12,6 +12,7 @@ const pages=[{url:"https://app9.biocloud.info/saldos/main/donde/132",fallback:"D
 const correctedCoordinates={LOPEZ:"-17.7255538,-63.1652414"};
 const clean=value=>String(value??"").replace(/\s+/g," ").trim();
 const numeric=value=>Number(clean(value).replace(/[^0-9.,-]/g,"").replace(/,/g,""))||0;
+const numericGenex=value=>{const raw=clean(value).replace(/[^0-9.,-]/g,"");if(/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(raw))return Number(raw.replace(/\./g,"").replace(",","."))||0;return numeric(raw);};
 const slug=value=>clean(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
 const wait=milliseconds=>new Promise(resolve=>setTimeout(resolve,milliseconds));
 async function fetchGenex(attempts=5){
@@ -47,7 +48,7 @@ async function scrapeGenex(){
     station.find(".product_wrapper").each((__,productNode)=>{
       const product=$(productNode),combustible=clean(product.find(".product_name").first().text()),volume=clean(product.find(".product_volume").first().text());if(!combustible)return;
       const agotado=/AGOTADO/i.test(volume),disponible=/DISPONIBLE/i.test(volume),queue=clean(product.find(".product_queue").first().text());
-      rows.push({id_empresa:GENEX_ID,id_sucursal:idSucursal,sucursal,direccion,id_producto:`genex-${slug(combustible)}`,combustible,color:combustible.includes("DIESEL")?"#3b82f6":combustible.includes("GAS")?"#16a34a":"#ef4444",saldo_litros:/litros/i.test(volume)?numeric(volume):0,capacidad_litros:null,estado:agotado?"AGOTADO":disponible?"DISPONIBLE":"CON STOCK",detalle_cola:queue,ultima_medicion:ultima,map_url:mapa,fuente:GENEX_URL,source_scraping:true});
+      rows.push({id_empresa:GENEX_ID,id_sucursal:idSucursal,sucursal,direccion,id_producto:`genex-${slug(combustible)}`,combustible,color:combustible.includes("DIESEL")?"#3b82f6":combustible.includes("GAS")?"#16a34a":"#ef4444",saldo_litros:/litros/i.test(volume)?numericGenex(volume):0,capacidad_litros:null,estado:agotado?"AGOTADO":disponible?"DISPONIBLE":"CON STOCK",detalle_cola:queue,ultima_medicion:ultima,map_url:mapa,fuente:GENEX_URL,source_scraping:true});
     });
   });return rows;
 }
