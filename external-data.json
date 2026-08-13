@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T15:07:03.835Z",
+  "generatedAt": "2026-08-13T15:10:05.770Z",
   "balances": [
     {
       "id_empresa": "10000000-0000-4000-8000-000000000002",
@@ -731,8 +731,8 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "ultima_medicion": "2026-08-13 10:39:41",
-      "coordenadas": "-17.75289640227274,-63.21297523426759",
-      "map_url": "https://www.google.com/maps?q=-17.75289640227274,-63.21297523426759",
+      "nombre_google": "Surtidor Orsa - GNV Oficina Central",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Surtidor%20Orsa%20-%20GNV%20Oficina%20Central",
       "fuente": "https://gasgroup.com.bo/estaciones/santacruz",
       "source_scraping": true
     },
@@ -749,8 +749,8 @@
       "estado": "DISPONIBLE",
       "detalle_cola": "Total disponibilidad",
       "ultima_medicion": "2026-08-13 10:39:41",
-      "coordenadas": "-17.75289640227274,-63.21297523426759",
-      "map_url": "https://www.google.com/maps?q=-17.75289640227274,-63.21297523426759",
+      "nombre_google": "Surtidor Orsa - GNV Oficina Central",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Surtidor%20Orsa%20-%20GNV%20Oficina%20Central",
       "fuente": "https://gasgroup.com.bo/estaciones/santacruz",
       "source_scraping": true
     },
@@ -766,8 +766,8 @@
       "capacidad_litros": null,
       "estado": "CON STOCK",
       "ultima_medicion": "2026-08-13 11:01:59",
-      "coordenadas": "-17.75352009999999,-63.25737898916019",
-      "map_url": "https://www.google.com/maps?q=-17.75352009999999,-63.25737898916019",
+      "nombre_google": "Gasgroup Orsa-Urubó Sucursal 1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Gasgroup%20Orsa-Urub%C3%B3%20Sucursal%201",
       "fuente": "https://gasgroup.com.bo/estaciones/santacruz",
       "source_scraping": true
     },
@@ -784,8 +784,8 @@
       "estado": "DISPONIBLE",
       "detalle_cola": "Total disponibilidad",
       "ultima_medicion": "2026-08-13 11:01:59",
-      "coordenadas": "-17.75352009999999,-63.25737898916019",
-      "map_url": "https://www.google.com/maps?q=-17.75352009999999,-63.25737898916019",
+      "nombre_google": "Gasgroup Orsa-Urubó Sucursal 1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Gasgroup%20Orsa-Urub%C3%B3%20Sucursal%201",
       "fuente": "https://gasgroup.com.bo/estaciones/santacruz",
       "source_scraping": true
     }
