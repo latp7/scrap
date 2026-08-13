@@ -13,6 +13,25 @@ const correctedCoordinates={LOPEZ:"-17.7255538,-63.1652414"};
 const clean=value=>String(value??"").replace(/\s+/g," ").trim();
 const numeric=value=>Number(clean(value).replace(/[^0-9.,-]/g,"").replace(/,/g,""))||0;
 const slug=value=>clean(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
+const wait=milliseconds=>new Promise(resolve=>setTimeout(resolve,milliseconds));
+async function fetchGenex(attempts=5){
+  let lastError;
+  for(let attempt=1;attempt<=attempts;attempt+=1){
+    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),45000);
+    try{
+      const response=await fetch(GENEX_URL,{signal:controller.signal,headers:{accept:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","accept-language":"es-BO,es;q=0.9,en;q=0.7","cache-control":"no-cache","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"}});
+      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      const html=await response.text();
+      if(!html.includes("wcpt-row"))throw new Error(`HTML inesperado (${html.length} bytes)`);
+      if(attempt>1)console.log(`GENEX respondió correctamente en el intento ${attempt}.`);
+      return html;
+    }catch(error){
+      lastError=error;console.error(`GENEX intento ${attempt}/${attempts}: ${error.name==="AbortError"?"tiempo agotado":error.message}`);
+      if(attempt<attempts)await wait(Math.min(30000,attempt*5000));
+    }finally{clearTimeout(timeout);}
+  }
+  throw new Error(`falló después de ${attempts} intentos: ${lastError?.message||"sin respuesta"}`);
+}
 async function scrape(page){
   const response=await fetch(page.url,{headers:{"user-agent":"Mozilla/5.0 SaldosCombustible/1.0"}});if(!response.ok)throw new Error(`Biocloud respondió ${response.status}`);
   const $=load(await response.text()),headings=$("h5").map((_,node)=>clean($(node).text())).get();
@@ -21,8 +40,7 @@ async function scrape(page){
   $("div.btn-bio-app.rounded").each((_,node)=>{const parts=$(node).children("div"),sucursal=clean(parts.eq(0).text());if(!sucursal)return;const target=parts.eq(7).find("[data-target^='.modal']").attr("data-target")||"",modal=target?$(target):null,onclick=modal?.find("[onclick*='invokeCSCode']").attr("onclick")||"",sourceCoordinates=onclick.match(/invokeCSCode\(['\"]([^'\"]+)/)?.[1]||"",coordinates=correctedCoordinates[sucursal]||sourceCoordinates,iframe=modal?.find("iframe").attr("src")||"",rawPlace=iframe.match(/!2s([^!]+)/)?.[1]||"",placeName=rawPlace?decodeURIComponent(rawPlace.replace(/\+/g," ")):"",direccion=clean(parts.eq(7).find(".px-1.col-12").first().text()),directUrl=coordinates?`https://www.google.com/maps?q=${coordinates}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clean(`${placeName||`Biopetrol ${sucursal}`} ${direccion}`))}`;rows.push({id_empresa:BIOPETROL_ID,id_sucursal:`biopetrol-${slug(sucursal)}`,sucursal,direccion,id_producto:`biopetrol-${slug(combustible)}`,combustible,color:page.color,saldo_litros:numeric(parts.eq(2).text()),capacidad_litros:null,vehiculos:numeric(parts.eq(4).text()),minutos:numeric(parts.eq(6).text()),ultima_medicion:ultima,coordenadas:coordinates,nombre_google:placeName,map_url:directUrl,fuente:page.url,source_scraping:true});});return rows;
 }
 async function scrapeGenex(){
-  const response=await fetch(GENEX_URL,{headers:{"user-agent":"Mozilla/5.0 SaldosCombustible/1.0"}});if(!response.ok)throw new Error(`GENEX respondió ${response.status}`);
-  const $=load(await response.text()),rows=[];
+  const $=load(await fetchGenex()),rows=[];
   $(".wcpt-row[data-wcpt-product-id]").each((_,node)=>{
     const station=$(node),sucursal=clean(station.find(".station_name").first().text());if(!sucursal)return;
     const idSucursal=`genex-${station.attr("data-wcpt-product-id")||slug(sucursal)}`,direccion=clean(station.find(".station_address").first().text()),ultima=clean(station.find(".station_updated").first().text()),mapa=station.find(".station_map a").attr("href")||"";

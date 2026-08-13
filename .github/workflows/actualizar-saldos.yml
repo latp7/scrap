@@ -20,6 +20,8 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Recuperar última lectura válida
+        run: curl --fail --retry 3 --output external-data.json https://scrap-trigger.scrap-trigger.workers.dev/data
       - run: npm ci
       - name: Consultar fuentes externas
         run: node scripts/snapshot-biopetrol.mjs
