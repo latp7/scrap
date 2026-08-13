@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T06:05:44.144Z",
+  "generatedAt": "2026-08-13T07:48:16.289Z",
   "balances": [
     {
       "id_empresa": "10000000-0000-4000-8000-000000000002",
@@ -13,7 +13,7 @@
       "capacidad_litros": null,
       "vehiculos": 27,
       "minutos": 9,
-      "ultima_medicion": "2026-08-13 02:01",
+      "ultima_medicion": "2026-08-13 03:46",
       "coordenadas": "-20.021236674057743,-63.531306466384734",
       "nombre_google": "Surtidor Cedeño",
       "map_url": "https://www.google.com/maps?q=-20.021236674057743,-63.531306466384734",
@@ -32,7 +32,7 @@
       "capacidad_litros": null,
       "vehiculos": 3,
       "minutos": 18,
-      "ultima_medicion": "2026-08-13 02:01",
+      "ultima_medicion": "2026-08-13 03:46",
       "coordenadas": "-20.0229538504344,-63.5328353084896",
       "nombre_google": "Estación de Servicio Piraí Sucursal II",
       "map_url": "https://www.google.com/maps?q=-20.0229538504344,-63.5328353084896",
@@ -51,29 +51,10 @@
       "capacidad_litros": null,
       "vehiculos": 265,
       "minutos": 6,
-      "ultima_medicion": "2026-08-13 02:01",
+      "ultima_medicion": "2026-08-13 03:46",
       "coordenadas": "-20.021236674057743,-63.531306466384734",
       "nombre_google": "Surtidor Cedeño",
       "map_url": "https://www.google.com/maps?q=-20.021236674057743,-63.531306466384734",
-      "fuente": "https://app9.biocloud.info/saldos/main/donde/134",
-      "source_scraping": true
-    },
-    {
-      "id_empresa": "10000000-0000-4000-8000-000000000002",
-      "id_sucursal": "biopetrol-chaco",
-      "sucursal": "CHACO",
-      "direccion": "AV. VIRGEN DE COTOCA, 2DO ANILLO",
-      "id_producto": "biopetrol-gasolina-especial",
-      "combustible": "GASOLINA ESPECIAL",
-      "color": "#ff6900",
-      "saldo_litros": 1331,
-      "capacidad_litros": null,
-      "vehiculos": 33,
-      "minutos": 3,
-      "ultima_medicion": "2026-08-13 02:01",
-      "coordenadas": "-17.7826273983221,-63.1640577245945",
-      "nombre_google": "Surtidor Biopetrol",
-      "map_url": "https://www.google.com/maps?q=-17.7826273983221,-63.1640577245945",
       "fuente": "https://app9.biocloud.info/saldos/main/donde/134",
       "source_scraping": true
     },
@@ -85,11 +66,11 @@
       "id_producto": "biopetrol-gasolina-especial",
       "combustible": "GASOLINA ESPECIAL",
       "color": "#ff6900",
-      "saldo_litros": 4347,
+      "saldo_litros": 221,
       "capacidad_litros": null,
-      "vehiculos": 109,
+      "vehiculos": 6,
       "minutos": 2,
-      "ultima_medicion": "2026-08-13 02:01",
+      "ultima_medicion": "2026-08-13 03:46",
       "coordenadas": "-17.7549241451465,-63.1969690835236",
       "nombre_google": "Biopetrol Equipetrol",
       "map_url": "https://www.google.com/maps?q=-17.7549241451465,-63.1969690835236",
@@ -108,7 +89,7 @@
       "capacidad_litros": null,
       "vehiculos": 313,
       "minutos": 6,
-      "ultima_medicion": "2026-08-13 02:01",
+      "ultima_medicion": "2026-08-13 03:46",
       "coordenadas": "-20.0229538504344,-63.5328353084896",
       "nombre_google": "Estación de Servicio Piraí Sucursal II",
       "map_url": "https://www.google.com/maps?q=-20.0229538504344,-63.5328353084896",
@@ -127,7 +108,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/Hk8YmJpFnqi6A1vf6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -144,7 +125,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/Hk8YmJpFnqi6A1vf6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -161,7 +142,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/Hk8YmJpFnqi6A1vf6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -178,7 +159,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/Hk8YmJpFnqi6A1vf6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -195,7 +176,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/9xKZAfwDwqrQZ56ZA",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -212,7 +193,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/9xKZAfwDwqrQZ56ZA",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -229,7 +210,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/9xKZAfwDwqrQZ56ZA",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -246,7 +227,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/9xKZAfwDwqrQZ56ZA",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -263,7 +244,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/b4iSCGWjt3CcWLzA7",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -280,7 +261,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/b4iSCGWjt3CcWLzA7",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -297,7 +278,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/b4iSCGWjt3CcWLzA7",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -314,7 +295,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/b4iSCGWjt3CcWLzA7",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -331,7 +312,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/jYUc1Cc4yKdLokw1A",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -348,7 +329,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/jYUc1Cc4yKdLokw1A",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -365,7 +346,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/ou8qw6RotHvoH49S7",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -382,7 +363,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/ou8qw6RotHvoH49S7",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -399,7 +380,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/ou8qw6RotHvoH49S7",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -416,7 +397,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/KirvSpJkLgaE1zMX6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -433,7 +414,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/KirvSpJkLgaE1zMX6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -450,7 +431,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/KirvSpJkLgaE1zMX6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -467,7 +448,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/uRdCwUejFdGQJeT28",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -484,7 +465,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/uRdCwUejFdGQJeT28",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -501,7 +482,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/DfYa53RiQo7hHsFc9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -518,7 +499,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/DfYa53RiQo7hHsFc9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -535,7 +516,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/DfYa53RiQo7hHsFc9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -552,7 +533,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/DfYa53RiQo7hHsFc9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -569,7 +550,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/AXhn68eEubDHzry39",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -586,7 +567,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/AXhn68eEubDHzry39",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -603,7 +584,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/AXhn68eEubDHzry39",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -620,7 +601,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/tedob3DhWvF2CEaw6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -637,7 +618,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/tedob3DhWvF2CEaw6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -650,11 +631,11 @@
       "id_producto": "genex-diesel",
       "combustible": "DIESEL+",
       "color": "#3b82f6",
-      "saldo_litros": 18.017,
+      "saldo_litros": 14.095,
       "capacidad_litros": null,
       "estado": "CON STOCK",
       "detalle_cola": "Mucha cola",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/tedob3DhWvF2CEaw6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -671,7 +652,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/tedob3DhWvF2CEaw6",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -688,7 +669,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/2511MNJRWhGBeM5e9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -705,7 +686,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/2511MNJRWhGBeM5e9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -722,7 +703,7 @@
       "capacidad_litros": null,
       "estado": "AGOTADO",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/2511MNJRWhGBeM5e9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -739,7 +720,7 @@
       "capacidad_litros": null,
       "estado": "DISPONIBLE",
       "detalle_cola": "",
-      "ultima_medicion": "13/08/26 2:01 am",
+      "ultima_medicion": "13/08/26 3:41 am",
       "map_url": "https://maps.app.goo.gl/2511MNJRWhGBeM5e9",
       "fuente": "https://genex.com.bo/estaciones/?3142_tax_product_tag%5B0%5D=314&3142_filtered=true&3142_orderby=option_1",
       "source_scraping": true
@@ -755,7 +736,7 @@
       "saldo_litros": 0,
       "capacidad_litros": null,
       "estado": "AGOTADO",
-      "ultima_medicion": "18/08/2026 1:40",
+      "ultima_medicion": "18/08/2026",
       "coordenadas": "-17.7624684,-63.1804821",
       "map_url": "https://www.google.com/maps?q=-17.7624684,-63.1804821",
       "fuente": "https://www.estacionrivero.com/index.php?option=com_content&view=category&layout=blog&id=11&Itemid=106",
@@ -769,10 +750,10 @@
       "id_producto": "rivero-gasolina-especial",
       "combustible": "GASOLINA ESPECIAL+",
       "color": "#ef4444",
-      "saldo_litros": 10000,
+      "saldo_litros": 6500,
       "capacidad_litros": null,
       "estado": "CON STOCK",
-      "ultima_medicion": "18/08/2026 1:40",
+      "ultima_medicion": "18/08/2026",
       "coordenadas": "-17.7624684,-63.1804821",
       "map_url": "https://www.google.com/maps?q=-17.7624684,-63.1804821",
       "fuente": "https://www.estacionrivero.com/index.php?option=com_content&view=category&layout=blog&id=11&Itemid=106",
@@ -789,7 +770,7 @@
       "saldo_litros": 0,
       "capacidad_litros": null,
       "estado": "AGOTADO",
-      "ultima_medicion": "18/08/2026 1:40",
+      "ultima_medicion": "18/08/2026",
       "coordenadas": "-17.7624684,-63.1804821",
       "map_url": "https://www.google.com/maps?q=-17.7624684,-63.1804821",
       "fuente": "https://www.estacionrivero.com/index.php?option=com_content&view=category&layout=blog&id=11&Itemid=106",
